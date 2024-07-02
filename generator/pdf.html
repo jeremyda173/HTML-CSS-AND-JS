@@ -62,13 +62,13 @@
 
     <script>
       function generatePDF() {
-        var texto = document.getElementById("min").value.trim(); // Obtener el texto ingresado por el usuario y eliminar espacios en blanco
+        var texto = document.getElementById("min").value.trim();
 
         if (texto !== "") {
           var doc = new jsPDF(); // Crear un nuevo documento PDF
 
           var maxWidth = 180;
-          var textArray = doc.splitTextToSize(texto, maxWidth); // Dividir el texto en líneas ajustadas al ancho máximo
+          var textArray = doc.splitTextToSize(texto, maxWidth);
 
           doc.text(textArray, 10, 10); // Imprimir el texto ajustado
 
